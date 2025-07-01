@@ -28,6 +28,10 @@ public class StoryDatastore {
         return d.createQuery(Story.class).field("level").equal(level).get();
     }
 
+    public class Strings {
+        public static final String DEFAULT_DESCRIPTION = "PPPPPPPP";
+}
+
     public static void SeedLevels() throws InvalidBoardException, InvalidPieceException{
         Datastore d = MorphiaSingleton.GetDatastore();
         
@@ -42,12 +46,12 @@ public class StoryDatastore {
 
         String[] layout ={
             "    K   ", 
-            "PPPPPPPP",
+            Strings.DEFAULT_DESCRIPTION,
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            Strings.DEFAULT_DESCRIPTION,
             "    k   "}; 
 
         Board b = new Board(layout);
@@ -91,12 +95,12 @@ public class StoryDatastore {
 
         String[] layout3 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            Strings.DEFAULT_DESCRIPTION,
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            Strings.DEFAULT_DESCRIPTION,
             "rnb kbnr"}; 
 
         Board b3 = new Board(layout3);
@@ -115,8 +119,8 @@ public class StoryDatastore {
 
         String[] layout4 ={
             "PPPPKPPP", 
-            "PPPPPPPP",
-            "PPPPPPPP",
+            Strings.DEFAULT_DESCRIPTION,
+            Strings.DEFAULT_DESCRIPTION,
             "        ",
             "        ",
             "        ",
@@ -137,12 +141,12 @@ public class StoryDatastore {
 
         String[] layout5 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            Strings.DEFAULT_DESCRIPTION,
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            Strings.DEFAULT_DESCRIPTION,
             "rnbqkbnr"}; 
 
         Board b5 = new Board(layout5);
